@@ -1,0 +1,13 @@
+
+
+
+
+
+<div class="card" style="width: 18rem; margin: 10px 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 25px;">
+  <img src="https://image.tmdb.org/t/p/w300{{Image}}" alt="" style="height: 250px;border-top-left-radius: 25px;border-top-right-radius: 25px;" [routerLink]="['/details', Id]">
+  <div class="card-body" style="display: flex;flex-direction: row;justify-content: space-between;">
+    <h5 class="card-title" style="text-align: center;cursor:pointer" [routerLink]="['/details', Id]">{{Title}}</h5>
+    <li class="list-group-item" style="text-align: end;width: 75px;">{{Date}} </li>
+
+  </div>
+</div>

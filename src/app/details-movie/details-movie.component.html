@@ -1,0 +1,37 @@
+<div *ngFor="let movie of Movies" >
+  <div class="container" *ngIf="idMovie==movie.id">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 border p-3 main-section bg-white">
+        <div class="row m-0 pl-3 pt-0 pb-3">
+          <h3 class="text-center">{{ movie.title }}</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="https://image.tmdb.org/t/p/w300{{ movie.poster_path }}" class="img-fluid rounded border p-3">
+          </div>
+          <div class="col-lg-8">
+            <div class="border p-3 m-0">
+              <div class="row" style="margin: 3%">
+                <div class="col-lg-12">
+                  <h5 class="text-muted">Here is the popularity of this movie !</h5>
+                  <p class="m-0 p-0">{{ movie.popularity }}</p>
+                </div>
+                <div class="col-lg-12">
+                  <h3 class="m-0 p-0 price-pro" style="margin: 15%">Rating
+                    {{ movie.vote_average }} /10
+                  </h3>
+                  <hr class="p-0 m-0" />
+                </div>
+                <div class="col-lg-12 pt-2">
+
+                  <h4 class="text-muted">{{ movie.overview }}</h4>
+                </div>
+                <div class="col-lg-12 pt-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

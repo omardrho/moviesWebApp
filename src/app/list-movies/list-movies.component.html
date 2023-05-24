@@ -1,0 +1,11 @@
+<div>
+
+  <div style="display: flex; justify-content: flex-end; align-items: center; padding-top: 20px;">
+    <input type="text" name="search" [(ngModel)]="requete" class="searchbar" placeholder="Enter a movie name">
+  </div>
+  <ul style="display: flex;flex-direction:row;flex-wrap: wrap; justify-content: space-around;">
+    <div *ngFor="let movie of allMovies | filter:requete ">
+      <app-movie-item [Title]="movie.title"  [Id]="movie.id" [Image]="movie.poster_path" [Date]="movie.release_date" ></app-movie-item>
+    </div>
+  </ul>
+</div>
